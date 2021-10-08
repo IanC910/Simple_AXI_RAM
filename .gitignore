@@ -1,7 +1,6 @@
 
 *.qws
 *.flock
-*.qws
 *.db_info
 *.cdb
 *.kpt
@@ -29,7 +28,7 @@
 *.dpi
 *.hb_info
 *.sig
-synthesis/incremental_db/README
+*/incremental_db/README
 *.rpt
 *.done
 *.smsg
