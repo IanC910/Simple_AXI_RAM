@@ -1,4 +1,4 @@
-
+# Quartus Verilog gitignore
 *.qws
 *.flock
 *.db_info
