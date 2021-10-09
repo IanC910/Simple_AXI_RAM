@@ -47,7 +47,7 @@ module AXI4_Lite_FSM (
 	// 4: 		Received write data, ready to send BRESP
 
 
-    assign rst_RAM = rst & (state == 0 | state == 1);
+    assign rst_RAM = (state == 0) | (rst & state == 1);
 
 	assign AWREADY = (state == 1);
 	assign ARREADY = (state == 1);
@@ -59,7 +59,7 @@ module AXI4_Lite_FSM (
 
     always @ (posedge clk) begin
 
-		if(rst == 1 & state <= 1) begin
+		if(rst & state <= 1) begin
 			state <= 0;
 		end
 

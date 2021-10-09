@@ -49,3 +49,4 @@ synthesis/simulation/modelsim/rtl_work/_info
 *.qtl
 synthesis/simulation/modelsim/rtl_work/_vmake
 *.do
+*.bak
