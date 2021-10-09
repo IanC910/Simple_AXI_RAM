@@ -112,7 +112,7 @@ module tb_Simple_AXI_RAM;
         rst <= 0;
         #10;
 
-        // Initiate Write
+        // Write
         AWVALID <= 1;
         AWADDR <= 4;
         #10;
@@ -138,7 +138,7 @@ module tb_Simple_AXI_RAM;
         BREADY <= 0;
         #20;
 
-        // Initiate Read
+        // Read
         ARVALID <= 1;
         ARADDR <= 4;
         #10;
@@ -146,6 +146,43 @@ module tb_Simple_AXI_RAM;
         ARVALID <= 0;
         ARADDR <= 0;
         #10;
+
+        RREADY <= 1;
+        #10;
+
+        RREADY <= 0;
+        #20;
+
+        // Write
+        AWVALID <= 1;
+        AWADDR <= 4;
+        #10;
+
+        AWVALID <= 0;
+        AWADDR <= 0;
+
+        WVALID <= 1;
+        WDATA <= 'h00003300;
+        WSTRB <= 'b0010;
+        #10;
+
+        WVALID <= 0;
+        WDATA <= 0;
+        WSTRB <= 0;
+
+        BREADY <= 1;
+        #10;
+
+        BREADY <= 0;
+        #10;
+
+        // Read
+        ARVALID <= 1;
+        ARADDR <= 4;
+        #10;
+
+        ARVALID <= 0;
+        ARADDR <= 0;
 
         RREADY <= 1;
         #10;

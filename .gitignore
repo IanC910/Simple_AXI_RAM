@@ -40,3 +40,12 @@
 *.sft
 *.vo
 *.xrf
+*.wlf
+*.ini
+synthesis/simulation/modelsim/msim_transcript
+synthesis/simulation/modelsim/rtl_work/_info
+*.qdb
+*.qpg
+*.qtl
+synthesis/simulation/modelsim/rtl_work/_vmake
+*.do

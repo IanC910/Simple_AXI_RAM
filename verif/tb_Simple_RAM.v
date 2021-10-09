@@ -91,6 +91,18 @@ module tb_Simple_RAM;
         r_en <= 0;
         #10;
 
+        w_en <= 1;
+        w_addr <= 0;
+        w_data <= 'h00003300;
+        w_strb <= 'b0010;
+        #10;
+
+        w_en <= 0;
+        w_addr <= 0;
+        w_data <= 0;
+        w_strb <= 0;
+        #10;
+
     end
 
 endmodule

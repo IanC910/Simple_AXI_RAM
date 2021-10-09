@@ -71,12 +71,12 @@ module AXI4_Lite_FSM (
 		// Ready
 		else if (state == 1) begin
 			
-			if(ARVALID == 1) begin
+			if(ARVALID) begin
 				// Accepting read transaction
 				state <= 2;
 			end
 			
-			else if(AWVALID == 1) begin
+			else if(AWVALID) begin
 				// Accepting write transaction
 				state <= 3;
 			end
@@ -85,7 +85,7 @@ module AXI4_Lite_FSM (
 		// Accepted read transaction, ready to send RDATA and RRESP
 		else if (state == 2) begin
 
-			if(RREADY == 1) begin
+			if(RREADY) begin
 				// Send RDATA and RRESP, transaction done, back to ready
 				state <= 1;
 			end
@@ -94,7 +94,7 @@ module AXI4_Lite_FSM (
 		// Accepted write transaction, awaiting write data
 		else if (state == 3) begin
 			
-			if(WVALID == 1) begin
+			if(WVALID) begin
 				// Accept write data, now ready to send BRESP
 				state <= 4;
 			end
@@ -103,7 +103,7 @@ module AXI4_Lite_FSM (
 		// Accepted write data, ready to send BRESP
 		else if (state == 4) begin
 			
-			if(BREADY == 1) begin
+			if(BREADY) begin
 				// Send BRESP, transaction done, back to ready
 				state <= 1;
 			end

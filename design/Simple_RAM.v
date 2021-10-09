@@ -41,10 +41,10 @@ module Simple_RAM #(parameter NUM_SLOTS = 6, parameter DATA_WIDTH_BYTES = 4)
             for(byte_sel = 0; byte_sel < DATA_WIDTH_BYTES; byte_sel = byte_sel + 1) begin: connect_data_to_memory_by_byte
                 
                 always @ (posedge clk or posedge rst) begin
-                    if(rst == 1) begin
+                    if(rst) begin
                         memory[slot][byte_sel*8 +: 8] <= 0;
                     end
-                    else if (w_en == 1 & w_addr == slot) begin
+                    else if (w_en & w_addr == slot & w_strb[byte_sel]) begin
                         memory[slot][byte_sel*8 +: 8] <= w_data[byte_sel*8 +: 8] & {8{w_strb[byte_sel]}};
                     end
                 end
