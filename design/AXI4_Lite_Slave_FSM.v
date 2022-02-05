@@ -1,6 +1,6 @@
 
 
-module AXI4_Lite_FSM (
+module AXI4_Lite_Slave_FSM (
 	clk, rst, rst_RAM,
 	ARVALID, ARREADY,
 	RVALID, RREADY,

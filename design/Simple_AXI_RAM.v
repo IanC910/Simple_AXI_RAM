@@ -84,7 +84,7 @@ module Simple_AXI_RAM #(parameter NUM_SLOTS = 6, parameter DATA_WIDTH_BYTES = 4)
 	end
 
 	
-	AXI4_Lite_FSM axi_fsm
+	AXI4_Lite_Slave_FSM axi_fsm
 	(
 		.clk(clk),
 		.rst(rst),

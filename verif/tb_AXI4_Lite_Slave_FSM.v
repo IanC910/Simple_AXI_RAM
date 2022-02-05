@@ -1,6 +1,6 @@
 
 
-module tb_AXI4_Lite_FSM;
+module tb_AXI4_Lite_Slave_FSM;
 
     // Interface Signals
 	reg		clk;
@@ -31,7 +31,7 @@ module tb_AXI4_Lite_FSM;
 	wire[3:0] state_out;
 
 	// DUT
-	AXI4_Lite_FSM DUT (
+	AXI4_Lite_Slave_FSM DUT (
 		.clk(clk), .rst(rst),
 		.ARVALID(ARVALID), .ARREADY(ARREADY),
 		.RVALID(RVALID), .RREADY(RREADY),
