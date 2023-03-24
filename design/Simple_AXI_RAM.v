@@ -14,6 +14,7 @@ module Simple_AXI_RAM #(parameter NUM_SLOTS = 6, parameter DATA_WIDTH_BYTES = 4)
 	parameter DATA_WIDTH_BITS	= DATA_WIDTH_BYTES * 8;
 
     // This is an excellent addition
+    // Yet another excellent addition
 
 	
 	// Interface Signals
