@@ -16,6 +16,8 @@ module Simple_AXI_RAM #(parameter NUM_SLOTS = 6, parameter DATA_WIDTH_BYTES = 4)
     // This is an excellent addition
     // Yet another excellent addition
 
+    // This was made on the new branch
+
 	
 	// Interface Signals
 	input	clk;
