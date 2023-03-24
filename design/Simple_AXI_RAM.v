@@ -13,6 +13,8 @@ module Simple_AXI_RAM #(parameter NUM_SLOTS = 6, parameter DATA_WIDTH_BYTES = 4)
 	parameter ADDR_WIDTH_BITS 	= $clog2(NUM_SLOTS);
 	parameter DATA_WIDTH_BITS	= DATA_WIDTH_BYTES * 8;
 
+    // This is an excellent addition
+
 	
 	// Interface Signals
 	input	clk;
